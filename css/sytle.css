@@ -1,0 +1,237 @@
+:root{
+    --background-color: rgb(194, 206, 219);
+    --nav-visited-color: rgb(214, 26, 26);
+    --nav-hover-color: chartreuse;
+    --nav-active-color: black;
+    --button-background-color: #07892e;
+    --button-font-color: white;
+    --button-border-color: rgba(0,0,0,0.3);
+    --table-hover-color: brown;
+    --grid-item-back-color: rgb(231, 236, 240);
+    --color-change-animation-color1: #edc655;
+    --color-change-animation-color2: #fcffad;
+    --color-change-animation-color3: #f76414;
+    --background-change-animation-color1: rgb(194, 206, 219);
+    --background-change-animation-color2: rgb(170, 179, 189);
+    --margin-general: 20px;
+}
+body{
+    margin: var(--margin-general);
+    background-color: var(--background-color);
+    font-size: 16px;
+    line-height: normal;
+    font-family: 'Sofia Sans', 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navigation-list__item:visited{
+    color: var(--nav-visited-color);
+}
+
+.navigation-list__item:hover, .navigation-list__item:focus{
+  text-decoration: none;
+  background-color: var(--nav-hover-color);
+}
+
+
+.navigation-list__item--active{
+    color:var(--nav-active-color);
+}
+
+.button{
+   border: none;
+   margin: 10px;
+   font-family: inherit;
+   background-color: var(--button-background-color);
+   color: var(--button-font-color);
+   text-decoration: none;
+   padding: 10px;
+   border-radius: 5px;
+   border-bottom: 2px solid var(--button-border-color);
+   transition: 2s opacity, 1s font-size;
+}
+
+.button:hover, .button:focus{
+    opacity: 0.6;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
+li{
+    display: inline;
+    margin-left: 15px;
+}
+
+.image_portfolio{
+    float: left;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+
+.portfolio{
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 40px;
+    flex: 1;
+    text-align: center;
+    
+}
+
+.page-header{
+    display: flex;
+    width: 100%;
+    min-height: 80px;
+    
+   
+}
+
+.page-header__item{
+    margin: var(--margin-general);
+    flex: 0 1 200px;
+}
+.page-header__item:last-child{
+    flex-grow: 1;
+    text-align: right;
+}
+*{
+    box-sizing: border-box;
+}
+.text-bold{
+    font-weight:bold;
+    font-variant: normal;
+   
+}
+
+.footer_class{
+    clear: both;
+    margin-top: 30px;
+}
+.text-center{
+    text-align: center;
+    
+}
+.footer_items{
+    width:max-content;
+    margin: 0 auto;
+}
+
+.about-table{
+    max-width: 80%;
+    margin: var(--margin-general) auto;
+    flex: 1;
+    
+}
+
+
+table, th, td{
+    border-collapse: collapse;
+    border: 1px solid var(--nav-active-color);
+
+}
+tr, td{
+    padding: 10px;
+    text-align: left;
+}
+tr:hover{
+    color:var(--table-hover-color);
+}
+#email, #tel, #message{
+    margin: 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.grid__item{
+    background-color: var(--grid-item-back-color);
+    padding: 20px;
+}
+
+@media all and (max-width: 500px){
+     .grid{
+        grid-template-columns: 1fr;
+     }
+     .page-header{
+        display: flex;
+        width: 100%;
+        min-height: 50px;
+        
+       
+    }
+    body{
+        margin: 10px;
+        font-size: 12px;
+    }
+    
+
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 750px){
+    .grid{
+        grid-gap: 20px;
+    }
+ }
+
+@keyframes color-change{
+    0% {
+      fill: var(--color-change-animation-color1);
+    }
+    50% {
+      fill: var(--color-change-animation-color2);
+    }
+    100% {
+      fill: var(--color-change-animation-color3);
+    }
+}
+@keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+}
+ 
+.watch{
+    animation: 4s color-change infinite alternate linear;
+}
+.C, .S, .SS, .SSS{
+    animation: 4s scale infinite alternate linear;
+}
+
+@keyframes scale{
+    
+    to{
+        transform: scale(2, 2);
+    }
+}
+
+@keyframes background-change{
+   from{
+     fill: var(--background-change-animation-color1);
+   }
+   to{
+    fill: var(--background-change-animation-color2);
+   }
+}
+.background{
+    animation: 4s background-change infinite alternate linear;
+}
+
+
+
+
+
+
