@@ -7,10 +7,11 @@
 
 body{
     margin: 20px;
-    background-color: rgb(194, 206, 219);
+    background-image: url("https://wallpaperaccess.com/full/1533655.jpg");
     font-size: 16px;
+    background-size:cover;
     line-height: normal;
-    font-family: 'Sofia Sans', 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -111,6 +112,7 @@ li{
             flex-grow: 1;
     text-align: right;
 }
+
 *{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
