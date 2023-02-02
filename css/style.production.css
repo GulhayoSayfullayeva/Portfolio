@@ -129,6 +129,7 @@ li{
 }
 .text-center{
     text-align: center;
+    animation: 4s move 2s alternate linear
     
 }
 .footer_items{
@@ -246,24 +247,24 @@ tr:hover{
       fill: #f76414;
     }
 }
-@-webkit-keyframes cloud-move {
+@-webkit-keyframes move {
     from {
       -webkit-transform: translate(0, 50px);
               transform: translate(0, 50px);
     }
     to {
-      -webkit-transform: translate(200px, 50px);
-              transform: translate(200px, 50px);
+      -webkit-transform: translate(200px, 100px);
+              transform: translate(200px, 100px);
     }
 }
-@keyframes cloud-move {
+@keyframes move {
     from {
       -webkit-transform: translate(0, 50px);
               transform: translate(0, 50px);
     }
     to {
-      -webkit-transform: translate(200px, 50px);
-              transform: translate(200px, 50px);
+      -webkit-transform: translate(200px, 100px);
+              transform: translate(200px, 100px);
     }
 }
  
@@ -272,8 +273,8 @@ tr:hover{
             animation: 4s color-change infinite alternate linear;
 }
 .C, .S, .SS, .SSS{
-    -webkit-animation: 4s scale infinite alternate linear;
-            animation: 4s scale infinite alternate linear;
+    -webkit-animation: 4s scale 2s reverse linear;
+            animation: 4s scale 2s reverse linear;
 }
 
 @-webkit-keyframes scale{
